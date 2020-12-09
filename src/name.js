@@ -5,7 +5,7 @@ const H3 = document.querySelector("h3");
 function storeName(event) {
   event.preventDefault();
   localStorage.setItem("NAME", nameInput.value);
-  init();
+  paint(nameInput.value);
 }
 
 function paint(currentName) {
@@ -14,7 +14,6 @@ function paint(currentName) {
 
 function init() {
   const currentName = localStorage.getItem("NAME");
-  console.log("1");
   if (currentName) {
     paint(currentName);
   } else {
